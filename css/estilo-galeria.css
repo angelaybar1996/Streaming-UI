@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    margin: 0;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+ /*------------------Estilos del header---------------------*/
+.header{
+    height: 60px;
+}
+.header.contenedor{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.logo,.icon-menu{
+    margin:5px;
+    color:gray;
+}
+.icon-menu{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size:30px;
+    background:black;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/*--------------------Estilos del menu----------*/
+.nav{
+    position: absolute;
+    top: 100px;
+    left: -100%;
+   width: 100%;
+   transition: all 0.4s;
+   
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu__link{
+    display: block;
+    padding: 15px;
+    background:black;
+   text-decoration: none;
+   color:white;
+}
+.menu__link:hover ,.select{
+    background:red;
+    color:white;
+}
+.mostrar{
+    left: 0;
+}
+/*---------------------Estilos de la galeria--------------------*/
+img{
+    display: block;
+    max-width: 100%;
+    
+}
+.galeria{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+.galeria__item{
+    width: 80%;
+    cursor:pointer;
+}
+/*---------------------Estilos del footer----------------------*/
+.footer{
+    margin-top: 1000px;
+    background:grey;
+    color: honeydew;
+    padding:10px;
+    text-align: center;
+}
+.footer .social [class^="icon-"]{
+    display: inline-block;
+    color: grey;
+    text-decoration: none;
+    font-size: 30px;
+    padding:10px;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+}
+/*---------------Estilos responsive-----------------*/
+@media(min-width:599px){
+    .logo{
+        font-size: 40px;
+    }
+    .galeria__item{
+        width: 48%;
+        margin: 5px;
+    }
+    .footer .social [class^="icon-"]{
+        margin:0 10px;
+    }
+}
+@media(min-width:600px){
+    .galeria__item{
+        width: 33%;
+        margin: 10px;
+       
+    }
+    
+}
+@media(min-width:1024px){
+    .contenedor{
+        width: 1000px;
+    }
+    .nav{
+       position: static;
+       width: auto;
+    }
+    .menu{
+        display: flex;
+    }
+    .icon-menu{
+        display:none;
+    }
+    .menu__link{
+        background: none;
+        font-size: 20px;
+    }
+    .select{
+        color:white;
+        background:red;
+    }
+    .galeria__item{
+        width: 20%;
+        margin: 15px;
+    }
+    
+}
